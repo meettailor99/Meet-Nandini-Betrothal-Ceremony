@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Outfit', 'Inter', sans-serif;
+    background-color: #FFF9F6;
+    color: #4A2E35;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  }
+}
+
+/* Fluid Typography Utilities using clamp() */
+.text-fluid-hero {
+  font-size: clamp(2rem, 5vw + 0.8rem, 4.25rem);
+  line-height: 1.15;
+}
+
+.text-fluid-section {
+  font-size: clamp(1.75rem, 3.5vw + 0.5rem, 3.25rem);
+  line-height: 1.2;
+}
+
+.text-fluid-body {
+  font-size: clamp(0.875rem, 1.2vw + 0.4rem, 1.125rem);
+  line-height: 1.6;
+}
+
+.touch-action-none {
+  touch-action: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF9F6;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #E8B4B8, #D48C95, #9E4B56);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9E4B56;
+}
+
+/* Blush Rose & Rose Gold Text & Border Utilities */
+.text-gold-shimmer {
+  background: linear-gradient(90deg, #9E4B56 0%, #D48C95 30%, #E6C594 60%, #9E4B56 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine-sweep 4s linear infinite;
+}
+
+.text-sage-gradient, .text-rose-gradient {
+  background: linear-gradient(135deg, #9E4B56 0%, #D48C95 50%, #E6C594 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-sage-pill, .bg-rose-pill {
+  background: linear-gradient(135deg, #E8B4B8 0%, #9E4B56 100%);
+}
+
+.bg-nude-pattern {
+  background-color: #FFF2ED;
+  background-image: radial-gradient(rgba(212, 140, 149, 0.22) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-sand-pattern {
+  background-color: #F8E5DF;
+  background-image: radial-gradient(rgba(158, 75, 86, 0.18) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+.bg-ivory-pattern {
+  background-color: #FFF9F6;
+  background-image: radial-gradient(rgba(212, 140, 149, 0.15) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+/* Glassmorphism & Blush Card Styles */
+.glass-nude-card, .glass-blush-card {
+  background: rgba(255, 242, 237, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 140, 149, 0.45);
+  box-shadow: 0 15px 35px -5px rgba(74, 46, 53, 0.14), inset 0 0 15px rgba(212, 140, 149, 0.12);
+}
+
+.glass-cream-card {
+  background: rgba(255, 249, 246, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 140, 149, 0.35);
+  box-shadow: 0 12px 30px rgba(74, 46, 53, 0.1), inset 0 0 10px rgba(212, 140, 149, 0.1);
+}
+
+/* Envelope 3D Preserve */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+
