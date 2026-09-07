@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-export const Navbar = ({ isEnvelopeOpened }) => {
+export const Navbar = () => {
   return (
     <motion.header
       initial={{ y: -60, opacity: 0 }}

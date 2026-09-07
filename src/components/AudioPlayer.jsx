@@ -1,16 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Volume2, VolumeX, Music } from 'lucide-react';
+import React, { useEffect, useRef } from 'react';
+import { VolumeX } from 'lucide-react';
 import { INVITATION_CONTENT } from '../config/invitationContent';
 
 export const AudioPlayer = ({ isAudioPlaying, setIsAudioPlaying }) => {
   const audioRef = useRef(null);
-  const [hasStarted, setHasStarted] = useState(false);
-
   useEffect(() => {
     if (isAudioPlaying && audioRef.current) {
-      audioRef.current.play().then(() => {
-        setHasStarted(true);
-      }).catch((err) => {
+      audioRef.current.play().catch((err) => {
         console.log("Audio playback user gesture requirement:", err);
         setIsAudioPlaying(false);
       });

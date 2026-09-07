@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Sparkles, ChevronDown, Heart } from 'lucide-react';
+import { Sparkles, ChevronDown } from 'lucide-react';
 import { INVITATION_CONTENT } from '../config/invitationContent';
 import { RingCeremonyMotif } from './DecorativeMotifs/RingCeremonyMotif';
 import { FloralClimberVine } from './DecorativeMotifs/FloralClimberVine';
-import { MandalaOrnament } from './DecorativeMotifs/MandalaOrnament';
 
 export const EnvelopeHero = ({ onOpen, isOpened }) => {
   const [isOpenState, setIsOpenState] = useState(isOpened);

@@ -11,8 +11,6 @@ export const ScratchDateCard = ({ onRevealComplete }) => {
   const containerRef = useRef(null);
   const [isRevealed, setIsRevealed] = useState(false);
   const [isScratching, setIsScratching] = useState(false);
-  const [scratchPercent, setScratchPercent] = useState(0);
-
   // Live Countdown Timer State (Target: 16th September 2026, 10:30 AM)
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
@@ -80,6 +78,20 @@ export const ScratchDateCard = ({ onRevealComplete }) => {
     return () => window.removeEventListener('resize', initCanvas);
   }, [initCanvas]);
 
+  const triggerFullReveal = useCallback(() => {
+    if (isRevealed) return;
+    setIsRevealed(true);
+    const canvas = canvasRef.current;
+    if (canvas) {
+      canvas.style.transition = 'opacity 0.6s ease-out';
+      canvas.style.opacity = '0';
+      setTimeout(() => {
+        canvas.style.display = 'none';
+      }, 600);
+    }
+    if (onRevealComplete) onRevealComplete();
+  }, [isRevealed, onRevealComplete]);
+
   // Calculate erased alpha pixel percentage relative to total canvas pixels
   const checkScratchPercentage = useCallback(() => {
     if (isRevealed) return;
@@ -101,26 +113,11 @@ export const ScratchDateCard = ({ onRevealComplete }) => {
     }
 
     const percent = Math.round((transparentCount / (totalPixels / 4)) * 100);
-    setScratchPercent(percent);
 
     if (percent >= 55) {
       triggerFullReveal();
     }
-  }, [isRevealed]);
-
-  const triggerFullReveal = useCallback(() => {
-    if (isRevealed) return;
-    setIsRevealed(true);
-    const canvas = canvasRef.current;
-    if (canvas) {
-      canvas.style.transition = 'opacity 0.6s ease-out';
-      canvas.style.opacity = '0';
-      setTimeout(() => {
-        canvas.style.display = 'none';
-      }, 600);
-    }
-    if (onRevealComplete) onRevealComplete();
-  }, [isRevealed, onRevealComplete]);
+  }, [isRevealed, triggerFullReveal]);
 
   // Handle Scratching Pointer Motion
   const scratch = (e) => {

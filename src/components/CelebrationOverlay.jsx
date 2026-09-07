@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import confetti from 'canvas-confetti';
 import { Sparkles, Heart } from 'lucide-react';
 
 export const CelebrationOverlay = ({ trigger, onClose }) => {
-  const [visible, setVisible] = useState(false);
-
   useEffect(() => {
     if (!trigger) return;
-    setVisible(true);
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -39,14 +36,13 @@ export const CelebrationOverlay = ({ trigger, onClose }) => {
 
     // Auto cleanup after 3.5s
     const timer = setTimeout(() => {
-      setVisible(false);
       if (onClose) onClose();
     }, 3500);
 
     return () => clearTimeout(timer);
   }, [trigger, onClose]);
 
-  if (!visible) return null;
+  if (!trigger) return null;
 
   return (
     <AnimatePresence>

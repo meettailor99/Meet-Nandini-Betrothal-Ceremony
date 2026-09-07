@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { INVITATION_CONTENT } from '../config/invitationContent';
-import { PaisleyMotif } from './DecorativeMotifs/PaisleyMotif';
 import { RingCeremonyMotif } from './DecorativeMotifs/RingCeremonyMotif';
 import { FloralClimberVine } from './DecorativeMotifs/FloralClimberVine';
 

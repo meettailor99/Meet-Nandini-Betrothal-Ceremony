@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { MandalaOrnament } from './DecorativeMotifs/MandalaOrnament';
 import { INVITATION_CONTENT } from '../config/invitationContent';
 
-export const LoadingScreen = ({ onComplete }) => {
+export const LoadingScreen = () => {
   return (
     <motion.div
       initial={{ opacity: 1 }}

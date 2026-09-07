@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const RingCeremonyMotif = ({ className = "w-12 h-12", color = "#D48C95" }) => {
+export const RingCeremonyMotif = ({ className = "w-12 h-12" }) => {
   return (
     <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
       <defs>

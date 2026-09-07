@@ -60,7 +60,7 @@ export function App() {
       />
 
       {/* Top Floating Glassmorphic Navbar with Custom Floral Monogram Logo */}
-      <Navbar isEnvelopeOpened={isEnvelopeOpened} />
+      <Navbar />
 
       {/* Main Single Continuous Scroll Journey */}
       <main className="w-full flex flex-col flex-1">
