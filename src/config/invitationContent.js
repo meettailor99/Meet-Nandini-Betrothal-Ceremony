@@ -6,20 +6,20 @@ export const INVITATION_CONTENT = {
   // Couple & Host Details
   groomFirstName: "Meet",
   groomLastName: "Tailor",  
-  groomFatherName: "Shaileshbhai",
-  groomMotherName: "Ameeben",
-  groomFullName: "Meet Tailor Shaileshbhai",
+  groomFatherName: "Shailesh J Tailor",
+  groomMotherName: "Amee S Tailor",
+  groomFullName: "Meet Tailor",
 
   brideFirstName: "Nandini",
   brideLastName: "Joshi",
-  brideFatherName: "Hiteshbhai",
-  brideMotherName: "Pratikshaben",
-  brideFullName: "Nandini Joshi Hiteshbhai",
+  brideFatherName: "Hitesh B Joshi",
+  brideMotherName: "Pratiksha H Joshi",
+  brideFullName: "Nandini",
 
   coupleTitle: "Meet & Nandini",
   familyName: "The Tailor Family",
   welcomeLine: "The Tailor Family Cordially Invites You",
-  footerHostName: "Manjulaben Tailor & Family",
+  footerHostName: "Manjulaben J Tailor & Family",
 
   // Ceremony Details
   ceremonyTitle: "BETROTHAL CEREMONY",
