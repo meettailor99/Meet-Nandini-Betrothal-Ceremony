@@ -196,18 +196,16 @@ export const EnvelopeHero = ({ onOpen, isOpened }) => {
                 opacity: isOpenState ? 1 : 0,
               }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative z-10 w-full h-full bg-ivory rounded-xl p-5 shadow-2xl border border-rose-300/60 flex flex-col items-center justify-center text-taupe"
+              className="relative z-20 w-full h-full bg-ivory rounded-xl p-5 shadow-2xl border border-rose-300/60 flex flex-col items-center justify-center text-taupe  mt-5"
             >
               <div className="border border-rose-300/40 w-full h-full rounded-lg p-4 flex flex-col items-center justify-center space-y-2 bg-cream-light/80">
                 {/* Sacred Phrases on Revealed Card */}
-                <span className="text-[10px] sm:text-xs font-display font-semibold text-rose-800 tracking-wider">
-                  {INVITATION_CONTENT.sacredPhrase1}
-                </span>
+              
 
-                <span className="text-xs uppercase tracking-widest text-rose-900 font-semibold font-sans">
+                <span className="text-ml uppercase tracking-widest text-rose-900 font-semibold font-sans">
                   {INVITATION_CONTENT.welcomeLine}
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-display font-bold text-taupe flex items-center gap-2">
+                <h2 className="text-3xl sm:text-4xl font-display font-bold text-taupe flex items-center gap-2 pt-4">
                   <span>{INVITATION_CONTENT.coupleTitle}</span>
                 </h2>
               </div>

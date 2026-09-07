@@ -77,7 +77,7 @@ export const CoupleIntro = () => {
                     {INVITATION_CONTENT.groomFirstName}
                   </h2>
                   <span className="text-[10px] xs:text-xs uppercase tracking-widest text-rose-800 font-sans font-bold block">
-                    The Groom
+                    To Be Groom
                   </span>
                 </div>
               </motion.div>
@@ -121,7 +121,7 @@ export const CoupleIntro = () => {
                     {INVITATION_CONTENT.brideFirstName}
                   </h2>
                   <span className="text-[10px] xs:text-xs uppercase tracking-widest text-rose-800 font-sans font-bold block">
-                    The Bride
+                    To Be Bride
                   </span>
                 </div>
               </motion.div>

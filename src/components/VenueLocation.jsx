@@ -31,19 +31,16 @@ export const VenueLocation = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-8 space-y-2"
         >
-          <span className="text-xs uppercase tracking-[0.3em] text-rose-900 font-sans font-semibold">
-            Venue &amp; Interactive Location
-          </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-taupe tracking-wide">
             Celebration Venue
           </h2>
         </motion.div>
 
         <PalaceArch borderColor="#D48C95" className="glass-nude-card rounded-3xl shadow-card-nude px-1 py-2 sm:px-6 sm:py-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center max-w-3xl mx-auto  p-5">
             
             {/* Left: Venue Info & Directions */}
-            <div className="space-y-4 sm:space-y-5 text-center md:text-left flex flex-col justify-center">
+            <div className="space-y-4 sm:space-y-5 text-center md:text-left flex flex-col justify-center p-5">
               <div className="space-y-2">
                 <div className="inline-flex items-center space-x-2 text-rose-900 text-[11px] sm:text-xs font-sans uppercase tracking-widest font-bold bg-rose-100/90 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full border border-rose-300/60 shadow-sm">
                   <MapPin className="w-3.5 h-3.5 text-rose-600 shrink-0" />
@@ -94,7 +91,7 @@ export const VenueLocation = () => {
             </div>
 
             {/* Right: Embedded Interactive Map Frame */}
-            <div className="relative w-full h-56 sm:h-72 rounded-2xl overflow-hidden border-2 border-rose-300/80 shadow-rose-glow group bg-ivory p-1">
+            <div className="relative w-full h-56 sm:h-80 rounded-2xl overflow-hidden border-2 border-rose-300/80 shadow-rose-glow group bg-ivory p-1">
               <iframe
                 title="Ceremony Location Map"
                 src={INVITATION_CONTENT.googleMapEmbedUrl}
