@@ -46,12 +46,12 @@ export const CoupleIntro = () => {
               transition={{ duration: 0.8 }}
               className="space-y-1.5 pt-4 sm:pt-6 px-2"
             >
-              <h3 className="text-xs sm:text-base uppercase tracking-[0.22em] text-rose-900 font-sans font-bold leading-relaxed">
+              <h3 className="text-lg sm:text-xl uppercase tracking-[0.22em] text-rose-900 font-sans font-bold leading-relaxed">
                 {INVITATION_CONTENT.welcomeLine}
               </h3>
-              <p className="text-xs sm:text-sm font-serif italic text-taupe/80 max-w-md mx-auto">
+              <h4 className="text-ml sm:text-xl font-serif italic text-taupe/80 max-w-md mx-auto">
                 to celebrate the auspicious Betrothal ceremony of
-              </p>
+              </h4>
             </motion.div>
 
             <div className="w-24 h-0.5 bg-gradient-to-r from-transparent via-rose-300 to-transparent opacity-70 my-2" />
@@ -73,7 +73,7 @@ export const CoupleIntro = () => {
                   <GroomVector className="w-24 h-24 xs:w-28 xs:h-28 sm:w-36 sm:h-36 drop-shadow-rose-glow" />
                 </div>
                 <div className="space-y-0.5">
-                  <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-display font-bold text-taupe tracking-wide leading-none">
+                  <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-display font-bold text-taupe tracking-wide leading-none mt-5">
                     {INVITATION_CONTENT.groomFirstName}
                   </h2>
                   <span className="text-[10px] xs:text-xs uppercase tracking-widest text-rose-800 font-sans font-bold block">
@@ -117,7 +117,7 @@ export const CoupleIntro = () => {
                   <BrideVector className="w-24 h-24 xs:w-28 xs:h-28 sm:w-36 sm:h-36 drop-shadow-rose-glow" />
                 </div>
                 <div className="space-y-0.5">
-                  <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-display font-bold text-taupe tracking-wide leading-none">
+                  <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-display font-bold text-taupe tracking-wide leading-none mt-5">
                     {INVITATION_CONTENT.brideFirstName}
                   </h2>
                   <span className="text-[10px] xs:text-xs uppercase tracking-widest text-rose-800 font-sans font-bold block">

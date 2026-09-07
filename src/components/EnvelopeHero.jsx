@@ -56,7 +56,7 @@ export const EnvelopeHero = ({ onOpen, isOpened }) => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full flex flex-row items-center justify-between gap-1 xs:gap-2 text-rose-900 font-display font-bold uppercase tracking-wider px-1 sm:px-4 mb-4"
+          className="w-full flex flex-row items-center justify-between gap-1 xs:gap-2 text-rose-900 font-display font-bold uppercase tracking-wider px-1 sm:px-4 mb-4 mt-5"
         >
           <span className="bg-ivory/95 px-2.5 py-1.5 xs:px-4 xs:py-2 rounded-full border border-rose-300/60 shadow-sm whitespace-nowrap text-[9px] xs:text-xs sm:text-sm">
             {INVITATION_CONTENT.sacredPhrase1}
